@@ -112,6 +112,39 @@
         primary key (`id`)
     ) engine=InnoDB;
 
+    create table `sector` (
+       `id` integer not null,
+        `version` integer not null,
+        `name` varchar(255),
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `sector_technology_record` (
+       `sector_id` integer not null,
+        `technology_record_id` integer not null
+    ) engine=InnoDB;
+
+    create table `sector_tool_record` (
+       `sector_id` integer not null,
+        `tool_record_id` integer not null
+    ) engine=InnoDB;
+
+    create table `spamlist` (
+       `id` integer not null,
+        `version` integer not null,
+        `threshold` double precision,
+        primary key (`id`)
+    ) engine=InnoDB;
+
+    create table `spamword` (
+       `id` integer not null,
+        `version` integer not null,
+        `english_spamword` varchar(255),
+        `spanish_spamword` varchar(255),
+        `spamlist_id` integer not null,
+        primary key (`id`)
+    ) engine=InnoDB;
+
     create table `technology_record` (
        `id` integer not null,
         `version` integer not null,
@@ -119,10 +152,10 @@
         `email` varchar(255),
         `inventor` varchar(255),
         `open_source` bit,
-        `sector` varchar(255),
         `stars` integer,
         `title` varchar(255),
         `web` varchar(255),
+        `sector_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -133,10 +166,10 @@
         `email` varchar(255),
         `inventor` varchar(255),
         `open_source` bit,
-        `sector` varchar(255),
         `stars` integer,
         `title` varchar(255),
         `web` varchar(255),
+        `sector_id` integer,
         primary key (`id`)
     ) engine=InnoDB;
 
@@ -157,6 +190,13 @@
     ) engine=InnoDB;
 
     insert into `hibernate_sequence` values ( 1 );
+
+    alter table `sector_technology_record` 
+       add constraint UK_b4d0knuwfu0wysqy5l25plu80 unique (`technology_record_id`);
+
+    alter table `sector_tool_record` 
+       add constraint UK_bsr4inr13m8upk2y9iwbirk0x unique (`tool_record_id`);
+create index IDX3eg8909lys96o3fgmgagnw6yj on `spamword` (`english_spamword`);
 
     alter table `user_account` 
        add constraint UK_castjbvpeeus0r8lbpehiu0e4 unique (`username`);
@@ -190,3 +230,38 @@
        add constraint FK_b1gwnjqm6ggy9yuiqm0o4rlmd 
        foreign key (`user_account_id`) 
        references `user_account` (`id`);
+
+    alter table `sector_technology_record` 
+       add constraint `FKmc1s58626x379uwf2nvd01qbu` 
+       foreign key (`technology_record_id`) 
+       references `technology_record` (`id`);
+
+    alter table `sector_technology_record` 
+       add constraint `FK65jl851krvtu9recs0sisyfbx` 
+       foreign key (`sector_id`) 
+       references `sector` (`id`);
+
+    alter table `sector_tool_record` 
+       add constraint `FKrssx9lx0mad1idskn0wmoomjo` 
+       foreign key (`tool_record_id`) 
+       references `tool_record` (`id`);
+
+    alter table `sector_tool_record` 
+       add constraint `FKor8yierdg2qsqdrqbtayumgmj` 
+       foreign key (`sector_id`) 
+       references `sector` (`id`);
+
+    alter table `spamword` 
+       add constraint `FKrk7poykhk0ukf2dm6oqv3rejm` 
+       foreign key (`spamlist_id`) 
+       references `spamlist` (`id`);
+
+    alter table `technology_record` 
+       add constraint `FKkcv3w0hfp0xxie8vw14tq4q4c` 
+       foreign key (`sector_id`) 
+       references `sector` (`id`);
+
+    alter table `tool_record` 
+       add constraint `FKl4fchw6w2xn4bxp2iqukjukte` 
+       foreign key (`sector_id`) 
+       references `sector` (`id`);

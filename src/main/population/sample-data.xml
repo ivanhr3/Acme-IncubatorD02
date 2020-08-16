@@ -17,6 +17,66 @@
 
 	<import resource="conversion-service.xml" />
 	
+	<!-- Spamlists -->
+	
+	<bean id="spamlist1" class="acme.entities.spamlist.Spamlist">
+		<property name="spamwordslist">
+			<list>
+				<ref bean="string1"/>
+				<ref bean="string2"/>
+				<ref bean="string3"/>
+				<ref bean="string4"/>
+				<ref bean="string5"/>
+				<ref bean="string6"/>
+				<ref bean="string7"/>
+			</list>
+		</property>
+		<property name="threshold" value="2.5"></property>
+	</bean>
+	<!-- Spamwords -->
+	
+	<bean id="string1" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="sex"/>
+		<property name="spanishSpamword" value="sexo"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
+	<bean id="string2" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="hard core"/>
+		<property name="spanishSpamword" value="explicito"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
+	<bean id="string3" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="viagra"/>
+		<property name="spanishSpamword" value="viagra"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
+	<bean id="string4" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="cialis"/>
+		<property name="spanishSpamword" value="cialis"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
+	<bean id="string5" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="nigeria"/>
+		<property name="spanishSpamword" value="nigeria"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
+	<bean id="string6" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="you've won"/>
+		<property name="spanishSpamword" value="has ganado"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
+	<bean id="string7" class="acme.entities.spamlist.Spamword">
+		<property name="englishSpamword" value="million dollar"/>
+		<property name="spanishSpamword" value="millón de dolares"/>
+		<property name="spamlist" ref="spamlist1"/>
+	</bean>
+	
 	<!-- Hernandez Bulletins -->
 	<bean id="hernandezbulletin1" class="acme.entities.bulletins.HernandezBulletin">
 		<property name="name" value="Iván"></property>
