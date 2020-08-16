@@ -39,6 +39,7 @@ master.menu.anonymous.listtoolrecords = Lista de registro de herramientas
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Autenticado
+master.menu.authenticated.user-accounts = Cuentas de usuario
 master.menu.authenticated.listnotices = Lista de avisos
 master.menu.authenticated.listtechnologyrecords = Lista de registros tecnológicos
 master.menu.authenticated.listtoolrecords = Lista de registros de herramientas
@@ -53,6 +54,10 @@ master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
 master.menu.administrator.listnotices = Lista de avisos
+
+master.menu.administrator.customization = Personalización
+master.menu.administrator.listsectors = Lista de sectores
+master.menu.administrator.listspamlist = Lista de palabras spam
 
 # master.menu.provider ########################################################
 

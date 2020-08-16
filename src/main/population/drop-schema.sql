@@ -23,6 +23,34 @@
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
 
+    alter table `sector_technology_record` 
+       drop 
+       foreign key `FKmc1s58626x379uwf2nvd01qbu`;
+
+    alter table `sector_technology_record` 
+       drop 
+       foreign key `FK65jl851krvtu9recs0sisyfbx`;
+
+    alter table `sector_tool_record` 
+       drop 
+       foreign key `FKrssx9lx0mad1idskn0wmoomjo`;
+
+    alter table `sector_tool_record` 
+       drop 
+       foreign key `FKor8yierdg2qsqdrqbtayumgmj`;
+
+    alter table `spamword` 
+       drop 
+       foreign key `FKrk7poykhk0ukf2dm6oqv3rejm`;
+
+    alter table `technology_record` 
+       drop 
+       foreign key `FKkcv3w0hfp0xxie8vw14tq4q4c`;
+
+    alter table `tool_record` 
+       drop 
+       foreign key `FKl4fchw6w2xn4bxp2iqukjukte`;
+
     drop table if exists `administrator`;
 
     drop table if exists `anonymous`;
@@ -44,6 +72,16 @@
     drop table if exists `overture`;
 
     drop table if exists `provider`;
+
+    drop table if exists `sector`;
+
+    drop table if exists `sector_technology_record`;
+
+    drop table if exists `sector_tool_record`;
+
+    drop table if exists `spamlist`;
+
+    drop table if exists `spamword`;
 
     drop table if exists `technology_record`;
 
