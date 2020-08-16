@@ -15,6 +15,10 @@
        drop 
        foreign key FK_6cyha9f1wpj0dpbxrrjddrqed;
 
+    alter table `notice_related_notices` 
+       drop 
+       foreign key `FKqc9an4dp5k6wuis8dyx289lg2`;
+
     alter table `provider` 
        drop 
        foreign key FK_b1gwnjqm6ggy9yuiqm0o4rlmd;
@@ -25,11 +29,25 @@
 
     drop table if exists `authenticated`;
 
+    drop table if exists `challenge`;
+
     drop table if exists `consumer`;
 
     drop table if exists `hernandez_bulletin`;
 
+    drop table if exists `inquire`;
+
+    drop table if exists `notice`;
+
+    drop table if exists `notice_related_notices`;
+
+    drop table if exists `overture`;
+
     drop table if exists `provider`;
+
+    drop table if exists `technology_record`;
+
+    drop table if exists `tool_record`;
 
     drop table if exists `user_account`;
 
