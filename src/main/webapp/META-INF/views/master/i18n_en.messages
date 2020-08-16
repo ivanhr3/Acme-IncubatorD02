@@ -39,7 +39,7 @@ master.menu.anonymous.listtoolrecords = Tool records list
 # master.menu.authenticated ###################################################
 
 master.menu.authenticated = Authenticated
-master.menu.administrator.user-accounts = User accounts
+master.menu.authenticated.user-accounts = User accounts
 master.menu.authenticated.listnotices = Notices list
 master.menu.authenticated.listtechnologyrecords = Technology records list
 master.menu.authenticated.listtoolrecords = Tool records list
