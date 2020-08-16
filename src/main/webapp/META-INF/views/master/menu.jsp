@@ -22,20 +22,43 @@
 			<acme:menu-suboption code="master.menu.anonymous.favourite-link" action="http://www.unity.com/es/learn"/>
 			<acme:menu-suboption code="master.menu.anonymous.listbulletins" action="/anonymous/hernandez-bulletin/list"/>
 			<acme:menu-suboption code="master.menu.anonymous.createbulletins" action="/anonymous/hernandez-bulletin/create"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.anonymous.listnotices" action="/anonymous/notice/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.anonymous.listtechnologyrecords" action="/anonymous/technology-record/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.anonymous.listtoolrecords" action="/anonymous/tool-record/list"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.administrator" access="hasRole('Administrator')">
 			<acme:menu-suboption code="master.menu.administrator.user-accounts" action="/administrator/user-account/list"/>
 			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.administrator.listnotices" action="/administrator/notice/list"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.administrator.shutdown" action="/master/shutdown"/>
+		</acme:menu-option>
+		
+		<acme:menu-option code="master.menu.authenticated" access="isAuthenticated()">
+			<acme:menu-suboption code="master.menu.authenticated.user-accounts" action="/authenticated/user-account/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.authenticated.listnotices" action="/authenticated/notice/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.authenticated.listtechnologyrecords" action="/authenticated/technology-record/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.authenticated.listtoolrecords" action="/authenticated/tool-record/list"/>
+			<acme:menu-separator/>
+			<acme:menu-suboption code="master.menu.authenticated.listinquires" action="/authenticated/inquire/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.listovertures" action="/authenticated/overture/list"/>
+			<acme:menu-suboption code="master.menu.authenticated.listchallenges" action="/authenticated/challenge/list"/>
+			
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.provider" access="hasRole('Provider')">
-			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.provider.favourite-link" action="http://www.unity.com/es/learn"/>
 		</acme:menu-option>
 
 		<acme:menu-option code="master.menu.consumer" access="hasRole('Consumer')">
-			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.example.com/"/>
+			<acme:menu-suboption code="master.menu.consumer.favourite-link" action="http://www.unity.com/es/learn"/>
 		</acme:menu-option>
 	</acme:menu-left>
 

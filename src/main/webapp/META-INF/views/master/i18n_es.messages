@@ -32,12 +32,27 @@ master.menu.anonymous = Anónimo
 master.menu.anonymous.favourite-link = Enlace favorito de Iván
 master.menu.anonymous.listbulletins = Lista de boletines
 master.menu.anonymous.createbulletins = Crea un boletín
+master.menu.anonymous.listnotices = Lista de avisos
+master.menu.anonymous.listtechnologyrecords = Lista de registros tecnológicos
+master.menu.anonymous.listtoolrecords = Lista de registro de herramientas
+
+# master.menu.authenticated ###################################################
+
+master.menu.authenticated = Autenticado
+master.menu.authenticated.listnotices = Lista de avisos
+master.menu.authenticated.listtechnologyrecords = Lista de registros tecnológicos
+master.menu.authenticated.listtoolrecords = Lista de registros de herramientas
+master.menu.authenticated.listinquires = Lista de peticiones
+master.menu.authenticated.listovertures = Lista de propuestas
+master.menu.authenticated.listchallenges = Lista de desafíos
+
 
 # master.menu.administrator ###################################################
 
 master.menu.administrator = Administrador
 master.menu.administrator.user-accounts = Cuentas de usuario
 master.menu.administrator.shutdown = Parar el sistema
+master.menu.administrator.listnotices = Lista de avisos
 
 # master.menu.provider ########################################################
 
