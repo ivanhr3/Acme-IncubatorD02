@@ -53,7 +53,9 @@
 			<acme:menu-suboption code="master.menu.authenticated.listtoolrecords" action="/authenticated/tool-record/list"/>
 			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.listinquires" action="/authenticated/inquire/list"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.listovertures" action="/authenticated/overture/list"/>
+			<acme:menu-separator/>
 			<acme:menu-suboption code="master.menu.authenticated.listchallenges" action="/authenticated/challenge/list"/>
 			
 		</acme:menu-option>

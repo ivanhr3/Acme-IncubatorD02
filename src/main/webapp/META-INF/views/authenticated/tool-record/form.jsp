@@ -17,7 +17,7 @@
 
 <acme:form readonly="true">
 	<acme:form-textbox code="authenticated.toolrecord.form.label.title" path="title"/>
-	<acme:form-textbox code="authenticated.toolrecord.form.label.sector" path="sector"/>
+	<acme:form-textbox code="authenticated.toolrecord.form.label.sector" path="sector.name"/>
 	<acme:form-textbox code="authenticated.toolrecord.form.label.inventor" path="inventor"/>
 	<acme:form-textarea code="authenticated.toolrecord.form.label.description" path="description"/>
 	<acme:form-url code="authenticated.toolrecord.form.label.web" path="web"/>

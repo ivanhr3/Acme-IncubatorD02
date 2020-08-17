@@ -17,6 +17,6 @@
 
 <acme:list>
 	<acme:list-column code="authenticated.toolrecord.list.label.title" path="title" width="30%"/>
-	<acme:list-column code="authenticated.toolrecord.list.label.sector" path="sector" width="30%"/>
+	<acme:list-column code="authenticated.toolrecord.list.label.sector" path="sector.name" width="30%"/>
 	<acme:list-column code="authenticated.toolrecord.list.label.stars" path="stars" width="30%"/>			
 </acme:list>
